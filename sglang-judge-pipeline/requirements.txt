@@ -1,0 +1,1 @@
+sglang[all]   # Linux + NVIDIA GPU (e.g. a Colab T4). The mock backend needs no extra packages.

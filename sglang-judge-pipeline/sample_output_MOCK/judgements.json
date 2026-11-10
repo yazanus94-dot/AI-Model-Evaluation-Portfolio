@@ -1,0 +1,151 @@
+{
+  "summary": {
+    "pairs": 12,
+    "consistency_rate": 0.5,
+    "contradiction_rate": 0.08333333333333333,
+    "agreement_on_consistent": 1.0,
+    "first_position_rate": 0.4583333333333333,
+    "agreement_naive": 0.8333333333333334,
+    "agreement_debiased": 0.8333333333333334,
+    "kappa_naive": 0.7241379310344828,
+    "kappa_debiased": 0.7073170731707318,
+    "verdict_counts": {
+      "A": 5,
+      "B": 6,
+      "tie": 1
+    },
+    "inconsistent_ids": [
+      "bio-atp",
+      "py-reverse",
+      "bio-t1d",
+      "geo-canada",
+      "med-antibiotics",
+      "bio-photo"
+    ],
+    "contradiction_ids": [
+      "bio-photo"
+    ]
+  },
+  "rows": [
+    {
+      "id": "bio-atp",
+      "human": "A",
+      "forward": "A",
+      "backward_mapped": "tie",
+      "raw_first_position_choice": 1,
+      "consistent": false,
+      "contradiction": false,
+      "final": "A"
+    },
+    {
+      "id": "bio-dnapol",
+      "human": "B",
+      "forward": "B",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "B"
+    },
+    {
+      "id": "math-percent",
+      "human": "B",
+      "forward": "B",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "B"
+    },
+    {
+      "id": "py-reverse",
+      "human": "A",
+      "forward": "tie",
+      "backward_mapped": "A",
+      "raw_first_position_choice": 0,
+      "consistent": false,
+      "contradiction": false,
+      "final": "A"
+    },
+    {
+      "id": "bio-t1d",
+      "human": "B",
+      "forward": "B",
+      "backward_mapped": "tie",
+      "raw_first_position_choice": 0,
+      "consistent": false,
+      "contradiction": false,
+      "final": "B"
+    },
+    {
+      "id": "geo-canada",
+      "human": "tie",
+      "forward": "tie",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 1,
+      "consistent": false,
+      "contradiction": false,
+      "final": "B"
+    },
+    {
+      "id": "cs-binsearch",
+      "human": "B",
+      "forward": "B",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "B"
+    },
+    {
+      "id": "med-antibiotics",
+      "human": "A",
+      "forward": "A",
+      "backward_mapped": "tie",
+      "raw_first_position_choice": 1,
+      "consistent": false,
+      "contradiction": false,
+      "final": "A"
+    },
+    {
+      "id": "bio-photo",
+      "human": "B",
+      "forward": "A",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 2,
+      "consistent": false,
+      "contradiction": true,
+      "final": "tie"
+    },
+    {
+      "id": "web-404",
+      "human": "A",
+      "forward": "A",
+      "backward_mapped": "A",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "A"
+    },
+    {
+      "id": "bio-rbc",
+      "human": "A",
+      "forward": "A",
+      "backward_mapped": "A",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "A"
+    },
+    {
+      "id": "bio-mrna",
+      "human": "B",
+      "forward": "B",
+      "backward_mapped": "B",
+      "raw_first_position_choice": 1,
+      "consistent": true,
+      "contradiction": false,
+      "final": "B"
+    }
+  ]
+}

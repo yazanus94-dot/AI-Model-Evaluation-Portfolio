@@ -1,0 +1,1 @@
+vllm   # Linux + NVIDIA GPU (e.g. a free Colab T4). The mock backend needs no extra packages.

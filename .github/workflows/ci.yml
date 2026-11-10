@@ -1,0 +1,76 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  jax-eval-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r jax-eval-metrics/requirements.txt pytest
+      - name: Unit tests (JAX metrics vs NumPy reference)
+        run: python -m pytest -q
+        working-directory: jax-eval-metrics
+        env:
+          PYTHONPATH: src
+      - name: End-to-end demo: train -> evaluate -> bootstrap -> calibrate
+        run: python -m jax_eval.demo --out results.json
+        working-directory: jax-eval-metrics
+        env:
+          PYTHONPATH: src
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jax-demo-results
+          path: jax-eval-metrics/results.json
+          retention-days: 14
+
+  sglang-judge-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (mock judge, no GPU)
+        run: python -m pytest -q
+        working-directory: sglang-judge-pipeline
+        env:
+          PYTHONPATH: src
+      - name: End-to-end mock run: pairwise judging with order swapping
+        run: python run_judge.py --backend mock --label MockJudge --out out_mock
+        working-directory: sglang-judge-pipeline
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sglang-mock-report
+          path: sglang-judge-pipeline/out_mock
+          retention-days: 14
+
+  vllm-eval-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (mock backend, no GPU)
+        run: python -m pytest -q
+        working-directory: vllm-eval-harness
+        env:
+          PYTHONPATH: src
+      - name: End-to-end mock run: rubric suite + defect report
+        run: python run_eval.py --backend mock --out out_mock
+        working-directory: vllm-eval-harness
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vllm-mock-report
+          path: vllm-eval-harness/out_mock
+          retention-days: 14

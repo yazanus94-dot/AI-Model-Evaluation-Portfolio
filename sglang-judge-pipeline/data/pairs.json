@@ -1,0 +1,86 @@
+[
+  {
+    "id": "bio-atp",
+    "question": "Which organelle is the main site of ATP production in eukaryotic cells?",
+    "answer_a": "The mitochondrion, via oxidative phosphorylation.",
+    "answer_b": "The ribosome, which converts glucose into ATP.",
+    "human_label": "A"
+  },
+  {
+    "id": "bio-dnapol",
+    "question": "What does DNA polymerase do?",
+    "answer_a": "It translates mRNA into protein.",
+    "answer_b": "It synthesizes new DNA strands by adding nucleotides complementary to the template strand.",
+    "human_label": "B"
+  },
+  {
+    "id": "math-percent",
+    "question": "What is 15% of 80?",
+    "answer_a": "15",
+    "answer_b": "12",
+    "human_label": "B"
+  },
+  {
+    "id": "py-reverse",
+    "question": "How do you reverse a Python list in place?",
+    "answer_a": "my_list.reverse()",
+    "answer_b": "Use sorted(my_list, reverse=True), which reverses the list in place.",
+    "human_label": "A"
+  },
+  {
+    "id": "bio-t1d",
+    "question": "What causes type 1 diabetes?",
+    "answer_a": "Eating too much sugar over many years.",
+    "answer_b": "Autoimmune destruction of the insulin-producing beta cells of the pancreas.",
+    "human_label": "B"
+  },
+  {
+    "id": "geo-canada",
+    "question": "What is the capital of Canada?",
+    "answer_a": "Ottawa.",
+    "answer_b": "Ottawa is the capital of Canada.",
+    "human_label": "tie"
+  },
+  {
+    "id": "cs-binsearch",
+    "question": "What is the time complexity of binary search on a sorted array?",
+    "answer_a": "O(n log n)",
+    "answer_b": "O(log n)",
+    "human_label": "B"
+  },
+  {
+    "id": "med-antibiotics",
+    "question": "Are antibiotics an effective treatment for the common cold?",
+    "answer_a": "No. Colds are caused by viruses, which antibiotics do not kill; unnecessary use also promotes resistance.",
+    "answer_b": "Yes, antibiotics are the standard treatment for colds.",
+    "human_label": "A"
+  },
+  {
+    "id": "bio-photo",
+    "question": "Which process do plants use to convert light energy into chemical energy?",
+    "answer_a": "Cellular respiration",
+    "answer_b": "Photosynthesis",
+    "human_label": "B"
+  },
+  {
+    "id": "web-404",
+    "question": "What does HTTP status code 404 mean?",
+    "answer_a": "The server could not find the requested resource.",
+    "answer_b": "The server encountered an internal error.",
+    "human_label": "A"
+  },
+  {
+    "id": "bio-rbc",
+    "question": "Which blood cells carry oxygen, and with what molecule?",
+    "answer_a": "Red blood cells (erythrocytes), using hemoglobin.",
+    "answer_b": "White blood cells (leukocytes), using hemoglobin.",
+    "human_label": "A"
+  },
+  {
+    "id": "bio-mrna",
+    "question": "Which molecule carries the genetic message from DNA to the ribosome?",
+    "answer_a": "Transfer RNA delivers DNA directly to the ribosome.",
+    "answer_b": "Messenger RNA (mRNA) carries the transcribed message from DNA to the ribosome.",
+    "human_label": "B"
+  }
+]
