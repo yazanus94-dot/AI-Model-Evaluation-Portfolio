@@ -22,7 +22,7 @@ jobs:
         working-directory: jax-eval-metrics
         env:
           PYTHONPATH: src
-      - name: End-to-end demo: train -> evaluate -> bootstrap -> calibrate
+      - name: "End-to-end demo: train -> evaluate -> bootstrap -> calibrate"
         run: python -m jax_eval.demo --out results.json
         working-directory: jax-eval-metrics
         env:
@@ -45,7 +45,7 @@ jobs:
         working-directory: sglang-judge-pipeline
         env:
           PYTHONPATH: src
-      - name: End-to-end mock run: pairwise judging with order swapping
+      - name: "End-to-end mock run: pairwise judging with order swapping"
         run: python run_judge.py --backend mock --label MockJudge --out out_mock
         working-directory: sglang-judge-pipeline
       - uses: actions/upload-artifact@v4
@@ -66,7 +66,7 @@ jobs:
         working-directory: vllm-eval-harness
         env:
           PYTHONPATH: src
-      - name: End-to-end mock run: rubric suite + defect report
+      - name: "End-to-end mock run: rubric suite + defect report"
         run: python run_eval.py --backend mock --out out_mock
         working-directory: vllm-eval-harness
       - uses: actions/upload-artifact@v4
