@@ -40,6 +40,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install pytest
       - name: Unit tests (mock judge, no GPU)
         run: python -m pytest -q
         working-directory: sglang-judge-pipeline
@@ -61,6 +62,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install pytest
       - name: Unit tests (mock backend, no GPU)
         run: python -m pytest -q
         working-directory: vllm-eval-harness
